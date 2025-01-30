@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+class bank{
+    private:
+    int acc_no;
+    char name[20];
+    float balance;
+    public:
+    void input(){
+        cout<<"enter the account holder name :- ";
+        cin>>name;
+        cout<<"enter the account number:- ";
+        cin>>acc_no;
+        cout<<"enter the balance:- ";
+        cin>>balance;
+    }
+    void show(){
+        cout<<"Name is :-" <<name<<endl;
+        cout<<"Account number  is :-" <<acc_no<<endl; 
+        cout<<"Balance is :-" <<balance<<endl; 
+    }
+    void withdraw (int amt){
+        if (amt<=balance){
+            balance=balance-amt;
+            cout<<"amout is withdrawal successfully "<<endl;
+            cout<<"balance is now:- "<<balance;
+        }
+        else{
+            cout<<"bhai app garib ho :(";
+        }}
+        void deposit (int amt){
+            balance=balance+amt;
+            cout<<"the amount depoited succesfully :0";
+            cout<<"balance is now:- "<<balance;
+        }
+        
+    };
+    int main(){
+        bank a;
+        int acc_no,amt,n;
+        a.input();
+        a.show();
+        cout<<"enter 1 for withdrawal or 2 for deposit:- ";
+        cin>>n;
+        cout<<"Enter the Amount : ";
+    cin>>amt;
+    if(n == 1)
+        a.withdraw(amt);
+    else
+        a.deposit(amt);
+    
+    a.show();
+    return 0;
+}
+
+
+
+
+
+
